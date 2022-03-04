@@ -6,7 +6,7 @@
 # include <unistd.h>
 
 int ft_printf(const char *arg, ...);
-int ft_charcheck(char c, va_list ap);
+static int ft_charcheck(char c, va_list ap);
 int ft_putlonghex(unsigned long long longhex);
 int ft_putaddr(unsigned long long addr);
 int ft_putchar(int c);
