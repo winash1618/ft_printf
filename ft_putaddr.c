@@ -6,17 +6,17 @@
 /*   By: mkaruvan <mkaruvan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 07:41:26 by mkaruvan          #+#    #+#             */
-/*   Updated: 2022/03/04 08:33:36 by mkaruvan         ###   ########.fr       */
+/*   Updated: 2022/03/04 08:50:02 by mkaruvan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putlonghex(unsigned long long longhex)
+int	ft_putlonghex(unsigned long long longhex)
 {
 	int	mod;
 	int	len;
-	
+
 	len = 0;
 	if (longhex)
 	{
@@ -31,10 +31,10 @@ int ft_putlonghex(unsigned long long longhex)
 	return (len);
 }
 
-int ft_putaddr(unsigned long long addr)
+int	ft_putaddr(unsigned long long addr)
 {
-	int len;
-	
+	int	len;
+
 	len = ft_putstr("0x");
 	if (addr == 0)
 		len += ft_putchar('0');

@@ -6,18 +6,18 @@
 /*   By: mkaruvan <mkaruvan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 03:25:23 by mkaruvan          #+#    #+#             */
-/*   Updated: 2022/03/04 08:27:31 by mkaruvan         ###   ########.fr       */
+/*   Updated: 2022/03/04 08:44:29 by mkaruvan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int ft_charcheck(char c, va_list ap)
+int	ft_charcheck(char c, va_list ap)
 {
-	int len;
+	int	len;
 
 	len = 0;
-	if (c =='c')
+	if (c == 'c')
 		len += ft_putchar(va_arg(ap, int));
 	else if (c == 's')
 		len += ft_putstr(va_arg(ap, char *));
@@ -38,9 +38,9 @@ static int ft_charcheck(char c, va_list ap)
 
 int	ft_printf(const char *str, ...)
 {
-	va_list ap;
-	int len;
-	int i;
+	va_list	ap;
+	int		len;
+	int		i;
 
 	len = 0;
 	i = 0;
