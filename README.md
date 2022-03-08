@@ -2,6 +2,11 @@
 
 Resources
 
+On Makefile
+
+1. https://users.cs.fiu.edu/~downeyt/make.shtml
+2. https://stackoverflow.com/questions/26133377/understanding-makefile-with-c-o-and        -Explanation on ${SRCS:.c=.o}
+
 ON variadic functions.
 
 1. https://www.geeksforgeeks.org/variadic-functions-in-c/
