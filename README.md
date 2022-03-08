@@ -15,3 +15,17 @@ ON printf testers:
 1. https://github.com/paulo-santana/ft_printf_tester
 2. https://github.com/Tripouille/printfTester
 
+Command for main
+
+1. make re && gcc main.c libftprintf.a && ./a.out && make fclean
+
+what is Makefile relink and how to avoid it?
+
+Ans.
+
+Why the Makefile works without cc?
+
+Ans.
+
+
+
