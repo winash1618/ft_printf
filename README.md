@@ -21,11 +21,16 @@ Command for main
 
 what is Makefile relink and how to avoid it?
 
-Ans.
+Ans. When you run gcc -Wall -Wextra -Werror <*.c>, each time the compilation happens 
+even if there is no change. But when you run Makefile with ar rcs $(NAME) $(OBJS) the 
+compilation is only done once after this only changes will be updated in the libft file
+when you run make.
 
 Why the Makefile works without cc?
 
 Ans.
-
+The makefile works without cc because it does not make the object file directly. it runs
+ar rcs $(NAME) $(OBJS) and make libftprintf.a file. This is a library file of object file 
+don't need gcc to compile it.
 
 
