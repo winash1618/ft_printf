@@ -3,21 +3,29 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkaruvan <mkaruvan@student.42.fr>          +#+  +:+       +#+         #
+#    By: mkaruvan <mkaruvan@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/27 04:47:02 by mkaruvan          #+#    #+#              #
-#    Updated: 2022/03/03 09:18:23 by mkaruvan         ###   ########.fr        #
+#    Updated: 2023/06/22 10:52:14 by mkaruvan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_putchar.c	ft_putint.c	ft_putunint.c ft_printf.c	ft_putaddr.c \
-   	   ft_puthex.c	ft_putstr.c ft_puthexcap.c
+SRCS = srcs/ft_putchar.c \
+       srcs/ft_putint.c \
+       srcs/ft_putunint.c \
+	   srcs/ft_printf.c \
+       srcs/ft_putaddr.c \
+       srcs/ft_puthex.c \
+	   srcs/ft_putstr.c \
+	   srcs/ft_puthexcap.c
+
+IDIR = includes
 
 OBJS = $(SRCS:.c=.o)
 
 NAME =	libftprintf.a
 
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra -I$(IDIR)
 
 $(NAME)	: $(OBJS)
 		ar rcs $(NAME) $(OBJS)
