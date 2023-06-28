@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaruvan <mkaruvan@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 03:25:23 by mkaruvan          #+#    #+#             */
-/*   Updated: 2023/06/28 08:13:53 by mkaruvan         ###   ########.fr       */
+/*   Created: 2023/06/26 08:26:30 by mkaruvan          #+#    #+#             */
+/*   Updated: 2023/06/26 08:27:05 by mkaruvan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...)
+t_list	*ft_lstnew(void *content)
 {
-	va_list	ap;
-	int		len;
-	int		i;
+	t_list	*new;
 
-	len = 0;
-	i = 0;
-	va_start(ap, str); // str is the name of the last fixed argument before the variable argument list
-	while (ft_strchr(str, '%') != NULL)
-	{
-		
-	}
-	va_end(ap);
-	return (len);
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaruvan <mkaruvan@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 03:25:23 by mkaruvan          #+#    #+#             */
-/*   Updated: 2023/06/28 08:13:53 by mkaruvan         ###   ########.fr       */
+/*   Created: 2023/06/26 08:26:40 by mkaruvan          #+#    #+#             */
+/*   Updated: 2023/06/26 08:27:34 by mkaruvan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...)
+int	ft_lstsize(t_list *lst)
 {
-	va_list	ap;
-	int		len;
-	int		i;
+	int	size;
 
-	len = 0;
-	i = 0;
-	va_start(ap, str); // str is the name of the last fixed argument before the variable argument list
-	while (ft_strchr(str, '%') != NULL)
+	size = 0;
+	while (lst)
 	{
-		
+		lst = lst->next;
+		size++;
 	}
-	va_end(ap);
-	return (len);
+	return (size);
 }

@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaruvan <mkaruvan@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 03:25:23 by mkaruvan          #+#    #+#             */
-/*   Updated: 2023/06/28 08:13:53 by mkaruvan         ###   ########.fr       */
+/*   Created: 2023/06/26 08:23:21 by mkaruvan          #+#    #+#             */
+/*   Updated: 2023/06/26 08:23:26 by mkaruvan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...)
+void	ft_lstadd_front(t_list **olst, t_list *nlst)
 {
-	va_list	ap;
-	int		len;
-	int		i;
-
-	len = 0;
-	i = 0;
-	va_start(ap, str); // str is the name of the last fixed argument before the variable argument list
-	while (ft_strchr(str, '%') != NULL)
+	if (!olst || !nlst)
+		return ;
+	if (*olst == NULL)
 	{
-		
+		*olst = nlst;
+		return ;
 	}
-	va_end(ap);
-	return (len);
+	nlst->next = *olst;
+	*olst = nlst;
 }

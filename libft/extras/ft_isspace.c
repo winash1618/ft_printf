@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaruvan <mkaruvan@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 03:25:23 by mkaruvan          #+#    #+#             */
-/*   Updated: 2023/06/28 08:13:53 by mkaruvan         ###   ########.fr       */
+/*   Created: 2023/05/26 08:32:09 by mkaruvan          #+#    #+#             */
+/*   Updated: 2023/06/26 08:47:47 by mkaruvan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...)
+int	ft_isspace(int c)
 {
-	va_list	ap;
-	int		len;
-	int		i;
-
-	len = 0;
-	i = 0;
-	va_start(ap, str); // str is the name of the last fixed argument before the variable argument list
-	while (ft_strchr(str, '%') != NULL)
-	{
-		
-	}
-	va_end(ap);
-	return (len);
+	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' \
+		|| c == '\r');
 }

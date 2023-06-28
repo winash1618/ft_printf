@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaruvan <mkaruvan@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 03:25:23 by mkaruvan          #+#    #+#             */
-/*   Updated: 2023/06/28 08:13:53 by mkaruvan         ###   ########.fr       */
+/*   Created: 2021/12/27 16:11:09 by mkaruvan          #+#    #+#             */
+/*   Updated: 2023/05/24 06:26:27 by mkaruvan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	va_list	ap;
-	int		len;
-	int		i;
+	char	*str;
+	int		count1;
+	int		count2;
 
-	len = 0;
-	i = 0;
-	va_start(ap, str); // str is the name of the last fixed argument before the variable argument list
-	while (ft_strchr(str, '%') != NULL)
-	{
-		
-	}
-	va_end(ap);
-	return (len);
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
+	count1 = ft_strlen(s1);
+	count2 = ft_strlen(s2);
+	str = (char *) ft_calloc((count1 + count2 + 1), sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s1, count1);
+	ft_memcpy(str + count1, s2, count2);
+	return (str);
 }
