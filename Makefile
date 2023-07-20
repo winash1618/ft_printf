@@ -14,18 +14,23 @@ SRCS = srcs/ft_printf.c
 
 LIBFT = libft/libft.a
 
-IDIR = includes
+IDIR = includes/
 
 OBJS = $(SRCS:.c=.o)
 
 NAME =	libftprintf.a
 
-CFLAGS	= -Wall -Werror -Wextra -I$(IDIR)
-
-$(NAME)	: $(OBJS) $(LIBFT)
-		ar rcs $(NAME) $(OBJS) $(LIBFT)
+CFLAGS	= -Wall -Werror -Wextra -I$(IDIR) -Ilibft/includes/
 
 all	: $(NAME)
+
+%.o:	%.c
+		$(CC) $(CFLAGS) -c $< -o $@
+
+
+$(NAME) : $(LIBFT) $(OBJS)
+		ar rcs $(NAME) $(OBJS) $(LIBFT)
+
 
 $(LIBFT) :
 		make -C libft

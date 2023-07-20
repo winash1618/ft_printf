@@ -69,22 +69,12 @@ SRC_DLST    := dlst/ft_dlstnew.c \
                dlst/ft_dlstadd_back.c \
                dlst/ft_dlstsize.c \
                dlst/ft_dlstlast.c \
-               dlst/ft_dlstclear.c \
-               dlst/ft_dlstfind.c 
+               dlst/ft_dlstclear.c 
 
 SRC_EXTRAS  := extras/get_next_line.c \
                extras/ft_atoi_base.c \
                extras/ft_isspace.c \
                extras/ft_matoi.c
-
-SRC_PRINTF  := ft_printf/ft_printf.c \
-               ft_printf/ft_putaddr.c \
-               ft_printf/ft_putchar.c \
-               ft_printf/ft_putint.c \
-               ft_printf/ft_putunint.c \
-               ft_printf/ft_putstr.c \
-               ft_printf/ft_puthexcap.c \
-               ft_printf/ft_puthex.c
 
 OBJS        := $(SRCS:.c=.o)
 
