@@ -1,5 +1,5 @@
-compile = "make"
-run = "./main"
+compile = "gcc main.c libfprintf.a libft/libft.a"
+run = "./a.out"
 hidden = ["main", "main-debug", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
 
 [nix]

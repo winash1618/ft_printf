@@ -18,6 +18,17 @@
 # include <stdio.h>
 #include "../libft/includes/libft.h"
 
+typedef struct s_flag
+{
+	int zero;
+  int hash;
+  int dot;
+  int plus;
+  int minus;
+  int space;
+  int number_before_dot;
+  int number_after_dot;
+}	t_flag;
 
 int	ft_printf(const char *arg, ...);
 
