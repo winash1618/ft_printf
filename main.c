@@ -16,7 +16,7 @@ int main() {
     // ft_printf("4: %-10.4d-----\n", num);      // Left-justify, minimum width 10, precision of 4
     // ft_printf("5: %#x-\n", num);     // Print hexadecimal number with 0x prefix
     // printf("7: %#08x-\n", num);   // Print hexadecimal number with 0x prefix, zero-padded to width 8
-    ft_printf("8: %+10.3d-\n", num);  // Print floating-point number with a plus sign and 2 decimal places
+    printf("8: %-+10.d-\n", num);  // Print floating-point number with a plus sign and 2 decimal places
     // printf("9: % f-\n", floatNum);      // Print floating-point number with a space if positive
 
     // // Examples with the 's' conversion specifier

@@ -17,21 +17,19 @@ void get_every_details(char *s, t_flag *flags)
   int i = 0;
   while (s[i] && !ft_isdigit(s[i]) && s[i] != '.')
   {
-    if (s[ft_strlen(s) - 1] == 'd')
-    {
-      if (s[i] == '+')
-      {
-        flags->plus = 1;
-      }
-      if (s[i] == '-')
-      {
-        flags->minus = 1;
-      }
-      if (s[i] == ' ')
-      {
-        flags->space = 1;
-      }
-    }
+    if (s[i] == '+')
+      flags->plus = 1;
+    else if (s[i] == '-')
+      flags->minus = 1;
+    else if (s[i] == ' ')
+      flags->space = 1;
+    else if (s[i] == '#')
+      flags->hash = 1;
+    i++;
+  }
+  if (s[i] == '0')
+  {
+    flags->zero = 1;
     i++;
   }
   if (s[i] == '.')
