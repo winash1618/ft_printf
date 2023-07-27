@@ -28,6 +28,7 @@ typedef struct s_flag
   int space;
   int number_before_dot;
   int number_after_dot;
+  char format;
 }	t_flag;
 
 int	ft_printf(const char *arg, ...);

@@ -13,10 +13,10 @@ int main() {
     // printf("1: %-10d-\n", num);        // Left-justify, minimum width 10
     // ft_printf("2: %%d", num);        // Zero-padding, minimum width 10
     // ft_printf("3: %.4d-\n", num);         // Precision of 4 (zero-padding if necessary)
-    // ft_printf("4: %-10.4d-----\n", num);      // Left-justify, minimum width 10, precision of 4
+    ft_printf("4: % 0+010d-----\n", num);      // Left-justify, minimum width 10, precision of 4
     // ft_printf("5: %#x-\n", num);     // Print hexadecimal number with 0x prefix
     // printf("7: %#08x-\n", num);   // Print hexadecimal number with 0x prefix, zero-padded to width 8
-    printf("8: %-+10.d-\n", num);  // Print floating-point number with a plus sign and 2 decimal places
+    // ft_printf("8: %-+10.d-\n", num);  // Print floating-point number with a plus sign and 2 decimal places
     // printf("9: % f-\n", floatNum);      // Print floating-point number with a space if positive
 
     // // Examples with the 's' conversion specifier
